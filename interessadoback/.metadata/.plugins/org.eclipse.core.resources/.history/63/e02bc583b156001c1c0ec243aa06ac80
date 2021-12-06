@@ -1,0 +1,21 @@
+package com.iasd.lourenco.interessados.resource;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.iasd.lourenco.interessados.model.Ocupacao;
+import com.iasd.lourenco.interessados.repository.OcupacaoRepository;
+
+@RestController
+@RequestMapping("/ocupacoes")
+public class OcupacaoResource {
+	
+	private OcupacaoRepository ocupacaoRepository;
+	
+	public List<Ocupacao> listar(){
+		return ocupacaoRepository.findAll();
+	}
+
+}

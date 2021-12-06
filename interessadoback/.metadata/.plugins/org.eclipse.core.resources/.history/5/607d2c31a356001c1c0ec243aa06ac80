@@ -1,0 +1,8 @@
+package com.iasd.lourenco.interessados.exceptionhandler;
+
+@ControllerAdvice 
+
+
+public class InteressadoExceptionHandler {
+
+}

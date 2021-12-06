@@ -1,0 +1,5 @@
+CREATE TABLE cargo (
+    codigo SERIAL,
+    nome VARCHAR(50) NOT NULL,
+    PRIMARY KEY(codigo)
+);
