@@ -1,0 +1,14 @@
+CREATE TABLE discipulador (
+    codigo SERIAL,
+    nome VARCHAR(50) NOT NULL,
+    ocupacao VARCHAR(100) NOT NULL,
+    codigo_discipulado int NULL,
+    FOREIGN KEY (codigo_discipulado) REFERENCES discipulado(codigo),
+    PRIMARY KEY(codigo)
+);
+
+INSERT INTO discipulador (nome, ) values ('Membro');
+INSERT INTO discipulador (nome) values ('Ancião');
+INSERT INTO discipulador (nome) values ('Diretor Jovem');
+INSERT INTO discipulador (nome) values ('Diagono');
+INSERT INTO discipulador (nome) values ('Diagoniza');

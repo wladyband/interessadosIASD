@@ -1,0 +1,10 @@
+CREATE TABLE discipulo (
+	codigo serial,
+	nome VARCHAR(50) NOT NULL,
+	telefone VARCHAR(50),
+	logradouro VARCHAR(100),
+	origem VARCHAR(100),
+	tipo_interesse VARCHAR(20) NOT NULL,
+	tipo_atendimento VARCHAR(20) NOT NULL,
+	primary key (codigo)
+);
