@@ -25,7 +25,11 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.model.Ocupacao"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+    <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
+    <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.model.Ocupacao"/>
+    <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.model.Discipulo"/>
+    <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.model.Discipulador"/>
 </qualifiedTypeNameHistroy>
