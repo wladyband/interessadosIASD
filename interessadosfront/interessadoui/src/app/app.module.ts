@@ -6,6 +6,7 @@ import { PanelModule } from "primeng/panel";
 import { RippleModule } from "primeng/ripple";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {SidebarModule} from 'primeng/sidebar';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AppComponent } from './app.component';
     ButtonModule,
     PanelModule,
     RippleModule,
+    SidebarModule,
     AppRoutingModule
   ],
   providers: [],

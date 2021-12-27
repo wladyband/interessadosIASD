@@ -1,53 +1,93 @@
-<nav class="container">
-  <div class="sidebar close">
-    <div class="logo-details">
-      <i class="pi pi-list"></i>
-      <span class="logo_name">
-        <img class="img-responsive" src="assets/images/IASD.png" width="60%" height="60%">
-      </span>
-    </div>
-    <ul class="nav-links">
-      <li>
-        <a href="">
-          <span class="link_name">
-            <i class="pi pi-th-large icone"></i>DashBoard</span>
+
+<nav class="container ">
+  <p-sidebar class="fundo" [(visible)]="visibleSidebar1">
+
+
+    <div class="page-wrapper chiller-theme">
+      <nav id="sidebar" class="sidebar-wrapper ">
+        <div class="custom-menu">
+          <button type="button" id="sidebarCollapse" class="btn">
+
+        </button>
+      </div>
+      <div class="sidebar-content">
+          <div class="sidebar-brand">
+           <a href="#">IASD</a>
+        </div>
+
+        <div class="sidebar-header">
+            <img class="img-responsive" src="assets/images/IASD.png" width="60%" height="60%">
+        </div>
+
+
+
+        <div class="sidebar-menu">
+            <ul class="list-unstyled components">
+
+           <li class="active">
+             <a href="#" class="dashboard">
+             <i class="fas fa-tachometer-alt"></i>
+               <span>Dashboard</span>
+
+             </a>
+           </li>
+           <li class="dropdown">
+             <a href="#home1" class="dropdown-toggle" data-toggle="collapse"
+             aria-expanded="false">
+             <i class="pi pi-user icone"></i>
+               <span>Discipulado</span>
+             </a>
+             <ul class="collapse list-unstyled menu" id="home1">
+                <li><a href="#">Lista de Discipulado
+              <!--<span class="badge badge-pill badge-success">Pro</span> -->
+              </a>
+              </li>
+              <li><a href="#">Cadastro de Discipulado</a></li>
+              <li><a href="#"></a></li>
+             </ul>
+           </li>
+
+            <li class="dropdown">
+             <a href="#home2" class="dropdown-toggle" data-toggle="collapse"
+             aria-expanded="false">
+             <i class="pi pi-user icone"></i>
+
+               <span>Discipulador</span>
+             </a>
+             <ul class="collapse list-unstyled menu" id="home2">
+                <li><a href="#">Lista de Discipulador</a></li>
+                <li><a href="#">Cadastro de Discipulador</a></li>
+             </ul>
+           </li>
+          </ul>
+        </div>
+
+
+
+      </div>
+      <div class="sidebar-footer">
+          <a href="#">
+        <i class="fa fa-bell"></i>
+        <span class="badge badge-pill badge-warning notification">3</span>
         </a>
-        <ul class="sub-menu blank">
-          <li><a href="" class="link_name">Cadastro de Discipulos</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="iocn-link">
-          <a href="">
-            <span class="link_name">
-              <i class="pi pi-user icone"></i>
-              Cadastro de Discipulos</span>
-            <i class="pi pi-chevron-down"></i>
-           </a>
-           <ul class="sub-menu">
-            <li><a href="" class="link_name">Cadastro de Discipulos</a></li>
-            <li><a href="">Lista de Discipulos</a></li>
-            <li><a href="">Editar Discipulo</a></li>
-          </ul>
-         </div>
-      </li>
-      <li>
-        <div class="iocn-link">
-          <a href="">
-            <span class="link_name">
-              <i class="pi pi-user icone"></i>
-              Cadastro de Discipulado</span>
-            <i class="pi pi-chevron-down"></i>
-           </a>
-           <ul class="sub-menu">
-            <li><a href="" class="link_name">Cadastro de Discipulado</a></li>
-            <li><a href="">Lista de Discipulado</a></li>
-            <li><a href="">Editar Discipulado</a></li>
-          </ul>
-         </div>
-      </li>
-    </ul>
+         <a href="#">
+        <i class="fa fa-envelope"></i>
+        <span class="badge badge-pill badge-success notification">7</span>
+        </a>
+         <a href="#">
+        <i class="fa fa-cog"></i>
+        <span class="badge-sonar"></span>
+        </a>
+        <a href="#">
+        <i class="fa fa-power-off"></i>
+        </a>
+      </div>
+    </nav>
   </div>
+
+
+  </p-sidebar>
+  <p-button type="button" (click)="visibleSidebar1 = true" icon="pi pi-bars"></p-button>
 
 </nav>
 <router-outlet></router-outlet>
