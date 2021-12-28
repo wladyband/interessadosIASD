@@ -7,18 +7,31 @@ import { RippleModule } from "primeng/ripple";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {SidebarModule} from 'primeng/sidebar';
+import {InputTextModule} from 'primeng/inputtext';
+import { TableModule } from 'primeng/table';
+import { DiscipuladoCadastroComponent } from './discipulado-cadastro/discipulado-cadastro.component';
+import { TooltipModule } from 'primeng/tooltip';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DiscipuladoCadastroComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ButtonModule,
     PanelModule,
     RippleModule,
     SidebarModule,
+    InputTextModule,
+    ButtonModule,
+    TableModule,
+    TooltipModule,
+    InputTextareaModule,
+
     AppRoutingModule
   ],
   providers: [],

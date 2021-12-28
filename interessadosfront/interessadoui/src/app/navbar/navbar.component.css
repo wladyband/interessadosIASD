@@ -1,0 +1,307 @@
+
+.sidebar-wrapper{
+  width:260px;
+  height:100vh;
+  position:fixed;
+  background-color:#145351;
+  top:0;
+  left:0;
+  transition:all 0.5s ease;
+  z-index:999;
+}
+
+#sidebar .custom-menu{
+   display:inline-block;
+ position:absolute;
+ top:20px;
+ right:0;
+ z-index:222;
+ margin-right:-20px;
+ -webkit-transition:0.3s;
+ transition:0.3s;
+}
+
+#sidebar .custom-menu .btn{
+background:0 0;
+border-color:transparent;
+}
+
+#sidebar .custom-menu .btn{
+ width:60px;
+ height:60px;
+ border-radius:50%;
+ position:relative;
+}
+
+#sidebar .custom-menu button:focus{
+ box-shadow:none;
+}
+
+.page-wrapper {
+ height: 100vh;
+ background: #145351;
+}
+
+
+.plano-fundo{
+ background: #145351;
+}
+
+
+#sidebar .custom-menu .btn i{
+ margin-right:-40px;
+ font-size:14px;
+ color:#fff;
+}
+
+.p-sidebar-header {
+ display: flex;
+ align-items: center;
+ background: #145351;
+ justify-content: flex-end;
+}
+
+.sidebar-content{
+ max-height:calc(100% - 10px);
+ height:calc(100% - 10px);
+ overflow-y:auto;
+ position:relative;
+}
+
+::-webkit-scrollbar{
+ background:transparent;
+ width:5px;
+}
+
+::-webkit-scrollbar-thumb{
+ background:#535965;
+ border-radius:10px;
+}
+
+
+.sidebar-wrapper .sidebar-brand > a{
+ text-transform:uppercase;
+ font-weight:bold;
+ flex-grow:1;
+ color:#fff;
+ text-decoration:none;
+}
+
+.sidebar-wrapper .sidebar-brand {
+ padding:10px 20px;
+ display:flex;
+ align-items:center;
+}
+
+.sidebar-wrapper .sidebar-header{
+ padding:20px;
+ overflow:hidden;
+ border-top:1px solid #145351;
+}
+
+
+.sidebar-wrapper .sidebar-header .user-pic{
+ float:left;
+ width:60px;
+ padding:2px;
+ border-radius:12px;
+ margin-right:15px;
+ overflow:hidden;
+}
+.sidebar-header .user-info > span{
+  display:block;
+
+}
+.sidebar-header .user-info .user-role{
+   font-size:12px;
+}
+
+.sidebar-header .user-info .user-status{
+   font-size:11px;
+ margin-top:4px;
+}
+
+.sidebar-header .user-info .user-status i{
+ font-size:8px;
+ margin-right:4px;
+
+}
+
+.sidebar-wrapper .sidebar-search > div{
+ padding:10px 20px;
+ border-top:1px solid #145351;
+ border-bottom:1px solid #145351;
+}
+
+.sidebar-wrapper .sidebar-search input,.input-group-text{
+ background:#145351;
+ border:none;
+}
+
+.input-group-text i{
+ color:#fff;
+}
+
+.sidebar-menu{
+ padding-bottom:10px;
+}
+
+#sidebar ul  > li{
+padding:0px 0px;
+}
+
+
+#sidebar ul  > li.active > a{
+    color:#818896;
+  }
+
+#sidebar ul  > li.active > a span{
+ color:#fff;
+  font-weight:500;
+  }
+
+#sidebar ul li:hover > a i{
+ color:#fff;
+}
+#sidebar ul li a:hover{
+ color:#fff;
+}
+
+#sidebar ul.components{
+ padding:12px 0;
+}
+
+.sidebar-menu > ul > li a{
+ padding:7px 30px 7px 20px;
+ line-height:30px;
+ font-size:15px;
+ color:#fff;
+  position:relative;
+  font-weight:400;
+  display:block;
+  text-decoration:none;
+}
+
+.sidebar-menu .header-menu span{
+ font-weight:bold;
+ font-size:14px;
+ padding:15px 20px 5px 20px;
+ display:inline-block;
+}
+
+.menu{
+ background-color:#145351;
+}
+
+.menu > li{
+ padding-left:15px!important;
+ position:relative;
+}
+.menu > li a:before{
+
+ font-family:"Font Awesome 5 Free";
+ font-weight:400;
+ display:inline-block;
+ text-align:center;
+ text-decoration:none;
+ margin-right:10px;
+ font-size:8px;
+}
+
+.menu > li a{
+ color:#b8bfce;
+ position:relative;
+ padding:4px 24px 4px 20px!important;
+ font-size:13px!important;
+}
+
+
+#sidebar ul li a span.badge{
+ float:right;
+ margin-top:8px;
+ margin-left:5px;
+}
+
+.badge-sonar{
+ display:inline-block;
+ border-radius:50%;
+ height:8px;
+ width:8px;
+ position:absolute;
+ top:0;
+
+}
+
+.dropdown-toggle::after{
+ position:absolute;
+ right:18px;
+ border:none!important;
+ color:#c9c9c9;
+ font-family:"Font Awesome 5 Free";
+ font-weight:900;
+
+ top:10px;
+}
+
+
+#sidebar ul li a span{
+ text-transform:capitalize;
+ display:inline-block;
+}
+
+
+#sidebar ul li a i{
+ margin-right:10px;
+ font-size:12px;
+ width:30px;
+ height:30px;
+ color:#818896;
+ line-height:30px;
+ background:#145351;
+ text-align:center;
+ border-radius:4px;
+}
+
+.chiller-theme .sidebar-footer{
+ background:#3a3f48;
+ box-shadow:0px -1px 5px #282c33;
+ border-top:1px solid #464a52;
+}
+
+.sidebar-footer{
+ position:absolute;
+ width:100%;
+ bottom:0!important;
+ display:flex;
+}
+
+.sidebar-footer a{
+ flex-grow:1;
+ text-align:center;
+ line-height:30px;
+ color:#818896;
+ line-height:30px;
+ position:relative;
+}
+
+.sidebar-footer > a .notification{
+ position:absolute;
+ top:0;
+}
+
+/*extra configuração*/
+
+body{
+ color:#818896;
+}
+
+.page-wrapper{
+height:100vh;
+}
+
+#sidebar.toggled{
+transform:translateX(-260px);
+}
+
+
+

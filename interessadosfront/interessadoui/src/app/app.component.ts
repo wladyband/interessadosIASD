@@ -9,11 +9,11 @@ import { PrimeNGConfig } from 'primeng/api';
 export class AppComponent  implements OnInit{
   title = 'interessadoui';
 
-  visibleSidebar1 = false;
+
 
   constructor(private primengConfig: PrimeNGConfig) {}
 
   ngOnInit() {
-    this.primengConfig.ripple = true;
+
   }
 }
