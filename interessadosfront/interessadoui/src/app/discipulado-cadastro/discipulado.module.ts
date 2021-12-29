@@ -1,31 +1,36 @@
-import { DiscipuladoModule } from './discipulado-cadastro/discipulado.module';
+import { MessageComponent } from './../message/message.component';
+import { DiscipuladoCadastroComponent } from './discipulado-cadastro.component';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ButtonModule } from "primeng/button";
 import { PanelModule } from "primeng/panel";
 import { RippleModule } from "primeng/ripple";
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
 import { SidebarModule } from 'primeng/sidebar';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
 import { InputTextareaModule } from 'primeng/inputtextarea';
-import { NavbarComponent } from './navbar/navbar.component';
 import { CalendarModule } from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
-import { MessageComponent } from './message/message.component';
 import { InputMaskModule } from 'primeng/inputmask';
 import { MessageModule } from 'primeng/message';
 
+
 @NgModule({
   declarations: [
-    AppComponent,
-    NavbarComponent,
-
+    DiscipuladoCadastroComponent,
+    MessageComponent
+  ],
+  exports: [
+    DiscipuladoCadastroComponent,
+    MessageComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     PanelModule,
@@ -40,10 +45,6 @@ import { MessageModule } from 'primeng/message';
     InputTextareaModule,
     InputMaskModule,
     MessageModule,
-    DiscipuladoModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  ]
 })
-export class AppModule { }
+export class DiscipuladoModule { }
