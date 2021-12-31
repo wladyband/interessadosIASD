@@ -1,7 +1,9 @@
 package com.iasd.lourenco.interessados.model;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +19,10 @@ public class Discipulo {
 	private Long codigo;
 	private String nome;
 	private String telefone;
+
+	@Column(name = "data_nascimento")
+	private LocalDate dataNascimento;
+
 	private String logradouro;
 	private String origem;
 	private TipoInteresse tipo_interesse;
@@ -44,6 +50,14 @@ public class Discipulo {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
+	}
+
+	public LocalDate getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(LocalDate dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 
 	public String getLogradouro() {

@@ -1,7 +1,0 @@
-CREATE TABLE discipulador (
-    codigo SERIAL,
-    nome_discipulador VARCHAR(50) NOT NULL,
-    lider int null,
-    membro
-	PRIMARY KEY(codigo)
-);

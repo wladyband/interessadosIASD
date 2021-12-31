@@ -1,0 +1,12 @@
+package com.iasd.lourenco.interessados.repository.discipulado;
+
+import java.util.List;
+
+import com.iasd.lourenco.interessados.model.Discipulo;
+import com.iasd.lourenco.interessados.repository.filter.DiscipuladorFilter;
+
+public interface DiscipuladoRepositoryQuery {
+	
+	public List<Discipulo> filtrar(DiscipuladorFilter discipuloFilter);
+
+}

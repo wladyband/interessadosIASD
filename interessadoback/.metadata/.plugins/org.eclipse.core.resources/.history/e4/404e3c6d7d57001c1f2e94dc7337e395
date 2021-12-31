@@ -1,6 +1,0 @@
-spring.datasource.url=jdbc:postgresql://localhost:5432/interessado
-spring.datasource.username=postgres
-spring.datasource.password=root
-
-spring.jpa.show-sql=true
-spring.jackson.deserialization.fail-on-unknown-properties=true
