@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
-export interface DiscipuloFiltro {
-  nome: string;
+export class DiscipuloFiltro {
+  nome: string = "";
+  pagina = 0;
+  itensPorPagina = 5;
 }
 
 
@@ -21,15 +23,29 @@ export class DiscipuloService {
   pesquisar(filtro: DiscipuloFiltro): Promise<any> {
     const headers = new HttpHeaders()
 
-    let params = new HttpParams();
+    let params = new HttpParams()
+      .set('page', filtro.pagina.toString())
+      .set('size', filtro.itensPorPagina.toString());
 
     if (filtro.nome) {
       params = params.set('nome', filtro.nome);
     }
 
+
     return this.http.get(`${this.discipulosURL}`,  { params })
     .toPromise()
-    .then((response: any) => response['content']);
+    .then((response: any) => {
+       const discipulos = response['content'];
+
+       const resultado = {
+        discipulos,
+        total: response['totalElements']
+
+      };
+
+      return resultado;
+
+      });
   }
 
 }

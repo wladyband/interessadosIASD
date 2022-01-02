@@ -1,4 +1,4 @@
-import { DiscipuloService } from './../discipulo.service';
+import { DiscipuloService, DiscipuloFiltro } from './../discipulo.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PesquisaDiscipuloComponent implements OnInit {
 
-  nome: string = "";
+  filtro = new DiscipuloFiltro();
   discipulos =[];
 
 
@@ -20,8 +20,11 @@ export class PesquisaDiscipuloComponent implements OnInit {
   }
 
     pesquisar(): void {
-      this.discipuloService.pesquisar({ nome: this.nome})
-        .then(discipulos => this.discipulos = discipulos);
+
+      this.discipuloService.pesquisar(this.filtro)
+        .then(resultado => {
+          this.discipulos = resultado.discipulos
+        });
     }
 
 

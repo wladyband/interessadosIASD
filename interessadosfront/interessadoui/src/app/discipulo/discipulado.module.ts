@@ -2,8 +2,7 @@ import { DiscipuladoCadastroComponent } from './discipulado-cadastro/discipulado
 import { DiscipuloRoutingModule } from './discipulo-routing.module';
 import { SharedModule } from './../shared/shared.module';
 
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -23,6 +22,10 @@ import { MessageModule } from 'primeng/message';
 import { PesquisaDiscipuloComponent } from './pesquisa-discipulo/pesquisa-discipulo.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { CommonModule, DatePipe, registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
+registerLocaleData(localePt, 'pt-BR');
 
 @NgModule({
   declarations: [
@@ -31,6 +34,10 @@ import { HttpClientModule } from '@angular/common/http';
 
   ],
   exports: [
+  ],
+  providers: [
+    DatePipe,
+    {provide: LOCALE_ID, useValue: 'pt-BR' }
   ],
   imports: [
     CommonModule,
