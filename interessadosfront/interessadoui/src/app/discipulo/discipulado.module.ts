@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 import { InputMaskModule } from 'primeng/inputmask';
 import { MessageModule } from 'primeng/message';
 import { PesquisaDiscipuloComponent } from './pesquisa-discipulo/pesquisa-discipulo.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { PesquisaDiscipuloComponent } from './pesquisa-discipulo/pesquisa-discip
     InputMaskModule,
     MessageModule,
     SharedModule,
-    DiscipuloRoutingModule
+    DiscipuloRoutingModule,
+    HttpClientModule
   ]
 })
 export class DiscipuladoModule { }

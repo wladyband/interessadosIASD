@@ -27,7 +27,7 @@ import com.iasd.lourenco.interessados.repository.DiscipuloRepository;
 import com.iasd.lourenco.interessados.repository.filter.DiscipuloFilter;
 
 @RestController
-@RequestMapping("/discipulo")
+@RequestMapping("/discipulos")
 public class DiscipuloResource {
 	
 	@Autowired

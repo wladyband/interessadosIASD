@@ -1,3 +1,4 @@
+import { DiscipuloService } from './../discipulo.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,33 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PesquisaDiscipuloComponent implements OnInit {
 
-  constructor() { }
+
+  discipulos =[];
+
+
+  constructor(
+    private discipuloService: DiscipuloService) { }
 
   ngOnInit(): void {
+    this.pesquisar();
   }
 
-  discipulos = [
-    { nome: 'Compra de pão', dataNascimento: '30/06/2017',
-      telefone: 'Padaria do José', logradouro: 'rua das ajfdsnkjdnskjdnskjnsdkncj' },
-      { nome: 'Compra de pão', dataNascimento: '30/06/2017',
-      telefone: 'Padaria do José', logradouro: 'rua das ajfdsnkjdnskjdnskjnsdkncj' },
-      { nome: 'Compra de pão', dataNascimento: '30/06/2017',
-      telefone: 'Padaria do José', logradouro: 'rua das ajfdsnkjdnskjdnskjnsdkncj' },
-      { nome: 'Compra de pão', dataNascimento: '30/06/2017',
-      telefone: 'Padaria do José', logradouro: 'rua das ajfdsnkjdnskjdnskjnsdkncj' },
-      { nome: 'Compra de pão', dataNascimento: '30/06/2017',
-      telefone: 'Padaria do José', logradouro: 'rua das ajfdsnkjdnskjdnskjnsdkncj' },
-      { nome: 'Compra de pão', dataNascimento: '30/06/2017',
-      telefone: 'Padaria do José', logradouro: 'rua das ajfdsnkjdnskjdnskjnsdkncj' },
-      { nome: 'Compra de pão', dataNascimento: '30/06/2017',
-      telefone: 'Padaria do José', logradouro: 'rua das ajfdsnkjdnskjdnskjnsdkncj' },
-      { nome: 'Compra de pão', dataNascimento: '30/06/2017',
-      telefone: 'Padaria do José', logradouro: 'rua das ajfdsnkjdnskjdnskjnsdkncj' },
-      { nome: 'Compra de pão', dataNascimento: '30/06/2017',
-      telefone: 'Padaria do José', logradouro: 'rua das ajfdsnkjdnskjdnskjnsdkncj' },
-      { nome: 'Compra de pão', dataNascimento: '30/06/2017',
-      telefone: 'Padaria do José', logradouro: 'rua das ajfdsnkjdnskjdnskjnsdkncj' },
+    pesquisar(): void {
+      this.discipuloService.pesquisar()
+        .then(discipulos => this.discipulos = discipulos);
+    }
 
-    ];
+
 
 }

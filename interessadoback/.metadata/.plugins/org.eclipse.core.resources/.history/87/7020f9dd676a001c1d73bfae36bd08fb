@@ -18,10 +18,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import com.iasd.lourenco.interessados.event.RecursoCriadoEvent;
 import com.iasd.lourenco.interessados.model.Discipulo;
 import com.iasd.lourenco.interessados.repository.DiscipuloRepository;
+import com.iasd.lourenco.interessados.repository.filter.DiscipuloFilter;
 
 @RestController
 @RequestMapping("/discipulo")
@@ -35,8 +38,8 @@ public class DiscipuloResource {
 	
 	
 	@GetMapping
-	public List<Discipulo> listar(){
-		return discipuloRepository.findAll();
+	public Page<Discipulo> pesquisar(DiscipuloFilter discipuloFilter, Pageable pageable){
+		return discipuloRepository.filtrar(discipuloFilter, pageable);
 	}
 	
 	@PostMapping
