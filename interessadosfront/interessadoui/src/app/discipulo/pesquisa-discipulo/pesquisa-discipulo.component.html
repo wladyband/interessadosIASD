@@ -1,27 +1,33 @@
 <div class="container">
-  <div class="p-grid">
+  <form autocomplete="off" (ngSubmit)="pesquisar()">
+          <div class="p-grid">
 
-    <div class="p-col-12">
-      <h1>Lista de Discipulos</h1>
-    </div>
+            <div class="p-col-12">
+              <h1>Lista de Discipulos</h1>
+            </div>
 
-    <div class="col-12 p-fluid">
-      <label>Nome</label>
-      <input pInputText type="text">
-    </div>
+            <div class="col-12 p-fluid">
+              <label>Nome</label>
+              <input pInputText type="text" name="nome"
+              [(ngModel)]="nome">
+            </div>
 
-    <div class="col-12 p-fluid">
-      <label>Contato Celular</label>
-      <input pInputText type="text">
-    </div>
+            <div class="col-12 p-fluid">
+              <label>Contato Celular</label>
+              <input pInputText type="text">
+            </div>
 
-    <div class="col-12">
-      <button pButton type="submit" label="Pesquisar"></button>
-    </div>
+            <div class="col-12">
+              <button pButton type="submit" label="Pesquisar"></button>
+            </div>
+
+          </div>
+
+  </form>
 
     <div class="grid">
       <div class="col-12">
-        <p-table [value]="discipulos" [paginator]="true" [rows]="3"
+        <p-table [value]="discipulos" [paginator]="true" [rows]="1"
           [responsive]="true">
           <ng-template pTemplate="header">
             <tr>
@@ -35,22 +41,22 @@
           <ng-template pTemplate="body" let-discipulo>
             <tr>
               <td>
-                <span class="column-title">Pessoa</span>
+                <span class="column-title">Nome</span>
                 {{ discipulo.nome }}
               </td>
 
               <td>
-                <span class="column-title">Descrição</span>
+                <span class="column-title">Endereço</span>
                 {{ discipulo.logradouro }}
               </td>
 
-              <td class="col-data">
-                <span class="column-title">Vencimento</span>
+              <td class="col-nascimento">
+                <span class="column-title">Data</span>
                 {{ discipulo.dataNascimento }}
               </td>
 
               <td class="col-data">
-                <span class="p-column-title">Pagamento</span>
+                <span class="p-column-title">Telefone</span>
                 {{ discipulo.telefone }}
               </td>
 
@@ -67,5 +73,4 @@
 
     <a pButton  routerLink="/discipulo/novo" label="Novo Discipulo"></a>
 
-  </div>
 </div>

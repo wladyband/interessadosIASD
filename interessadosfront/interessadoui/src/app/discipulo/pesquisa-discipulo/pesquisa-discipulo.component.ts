@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PesquisaDiscipuloComponent implements OnInit {
 
-
+  nome: string = "";
   discipulos =[];
 
 
@@ -20,7 +20,7 @@ export class PesquisaDiscipuloComponent implements OnInit {
   }
 
     pesquisar(): void {
-      this.discipuloService.pesquisar()
+      this.discipuloService.pesquisar({ nome: this.nome})
         .then(discipulos => this.discipulos = discipulos);
     }
 

@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+
+export interface DiscipuloFiltro {
+  nome: string;
+}
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,10 +18,16 @@ export class DiscipuloService {
     private http: HttpClient
   ) { }
 
-  pesquisar(): Promise<any> {
+  pesquisar(filtro: DiscipuloFiltro): Promise<any> {
     const headers = new HttpHeaders()
 
-    return this.http.get(`${this.discipulosURL}`)
+    let params = new HttpParams();
+
+    if (filtro.nome) {
+      params = params.set('nome', filtro.nome);
+    }
+
+    return this.http.get(`${this.discipulosURL}`,  { params })
     .toPromise()
     .then((response: any) => response['content']);
   }
