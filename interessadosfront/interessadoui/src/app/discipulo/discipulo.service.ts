@@ -21,32 +21,36 @@ export class DiscipuloService {
   ) { }
 
   pesquisar(filtro: DiscipuloFiltro): Promise<any> {
+      const headers = new HttpHeaders()
+
+      let params = new HttpParams()
+        .set('page', filtro.pagina.toString())
+        .set('size', filtro.itensPorPagina.toString());
+
+      if (filtro.nome) {
+        params = params.set('nome', filtro.nome);
+      }
+
+
+      return this.http.get(`${this.discipulosURL}`,  { params })
+      .toPromise()
+      .then((response: any) => {
+            const responseJson = response;
+            const discipulos = responseJson.content;
+
+            const resultado = {
+              discipulos,
+              total: responseJson.totalElements
+            };
+        return resultado;
+      });
+  }
+
+  excluir(codigo: number): Promise<void> {
     const headers = new HttpHeaders()
 
-    let params = new HttpParams()
-      .set('page', filtro.pagina.toString())
-      .set('size', filtro.itensPorPagina.toString());
-
-    if (filtro.nome) {
-      params = params.set('nome', filtro.nome);
-    }
-
-
-    return this.http.get(`${this.discipulosURL}`,  { params })
-    .toPromise()
-    .then((response: any) => {
-       const responseJson = response;
-       const discipulos = responseJson.content;
-
-       const resultado = {
-        discipulos,
-        total: responseJson.totalElements
-
-      };
-
-      return resultado;
-
-      });
+    return this.http.delete<void>(`${this.discipulosURL}/${codigo}`, { headers })
+      .toPromise();
   }
 
 }

@@ -1,6 +1,7 @@
 import { DiscipuloService, DiscipuloFiltro } from './../discipulo.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { LazyLoadEvent } from 'primeng/api';
+import { Table } from 'primeng/table';
 
 @Component({
   selector: 'app-pesquisa-discipulo',
@@ -12,7 +13,7 @@ export class PesquisaDiscipuloComponent implements OnInit {
   totalRegistros = 0;
   filtro = new DiscipuloFiltro();
   discipulos: any[] =[];
-
+  @ViewChild('tabela') grid!: Table;
 
   constructor(
     private discipuloService: DiscipuloService) { }
@@ -35,6 +36,13 @@ export class PesquisaDiscipuloComponent implements OnInit {
     aoMudarPagina(event: LazyLoadEvent) {
       const pagina = event.first / event.rows;
       this.pesquisar(pagina);
+    }
+
+    excluir(discipulo: any) {
+      this.discipuloService.excluir(discipulo.codigo)
+        .then(() => {
+          this.grid.reset();
+        })
     }
 
 }
