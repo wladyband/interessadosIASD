@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 export class DiscipuloFiltro {
   nome: string = "";
   pagina = 0;
-  itensPorPagina = 5;
+  itensPorPagina = 2;
 }
 
 
@@ -35,11 +35,12 @@ export class DiscipuloService {
     return this.http.get(`${this.discipulosURL}`,  { params })
     .toPromise()
     .then((response: any) => {
-       const discipulos = response['content'];
+       const responseJson = response;
+       const discipulos = responseJson.content;
 
        const resultado = {
         discipulos,
-        total: response['totalElements']
+        total: responseJson.totalElements
 
       };
 
