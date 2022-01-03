@@ -1,18 +1,62 @@
 package com.iasd.lourenco.interessados.model;
 
-public enum TipoInteresse {
-	
-	NIVEL_A("Frequenta a igreja e não há impedimento para ser batizado"),
-	NIVEL_B("Frequenta a igreja e possui algum tipo de impedimento (não é casado, trabalha aos sábado, etc.)"),
-	NIVEL_C("Frequenta a igreja em datas especiais. Baixo interesse (vai à igreja, participa, conhece. Mas reluta ainda com a decisão)");
+import java.util.Objects;
 
-	private final String descricao;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-	TipoInteresse(String descricao) {
-		this.descricao = descricao;
+@Entity
+@Table(name = "tipo_interesse")
+public class TipoInteresse {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long codigo;
+	private String modelo;
+	private String descricao;
+
+	public Long getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
 	}
 
 	public String getDescricao() {
 		return descricao;
 	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(codigo);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TipoInteresse other = (TipoInteresse) obj;
+		return Objects.equals(codigo, other.codigo);
+	}
+
 }

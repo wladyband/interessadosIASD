@@ -48,9 +48,9 @@ public class OcupacaoResource {
 	
 	@GetMapping("/{codigo}")
 	public ResponseEntity<Ocupacao> buscarPeloCodigo(@PathVariable Long codigo) {
-		Optional<Ocupacao> categoria = this.ocupacaoRepository.findById(codigo);
-		return categoria.isPresent() ? 
-		        ResponseEntity.ok(categoria.get()) : ResponseEntity.notFound().build();
+		Optional<Ocupacao> ocupacao = this.ocupacaoRepository.findById(codigo);
+		return ocupacao.isPresent() ? 
+		        ResponseEntity.ok(ocupacao.get()) : ResponseEntity.notFound().build();
 	}
 	
 	

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { DiscipuladoModule } from './discipulo/discipulado.module';
-import { CoreModule } from './core/core.module';
+import { CoreModule } from './core/navbar/core.module';
 import { NgModule, LOCALE_ID  } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

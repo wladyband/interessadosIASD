@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { CommonModule, DatePipe, registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { DropdownModule } from 'primeng/dropdown';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -57,6 +58,7 @@ registerLocaleData(localePt, 'pt-BR');
     MessageModule,
     SharedModule,
     DiscipuloRoutingModule,
+    DropdownModule,
     HttpClientModule
   ]
 })

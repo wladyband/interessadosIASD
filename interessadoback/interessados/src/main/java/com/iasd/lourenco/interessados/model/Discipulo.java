@@ -28,7 +28,13 @@ public class Discipulo {
 
 	private String logradouro;
 	private String origem;
+	
+	@ManyToOne
+	@JoinColumn(name = "codigo_interesse")
 	private TipoInteresse tipo_interesse;
+	
+	@ManyToOne
+	@JoinColumn(name = "codigo_atendimento")
 	private TipoAtendimento tipo_atendimento;
 	
 	@ManyToOne
