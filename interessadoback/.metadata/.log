@@ -4514,3 +4514,114 @@ Binding(CTRL+SHIFT+C,
 
 !ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-02 11:34:04.485
 !MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final
+
+!ENTRY org.eclipse.lsp4e 2 0 2022-01-03 08:40:08.397
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:385)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2092)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-03 08:41:45.618
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-03 08:42:31.671
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 08:52:55.211
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 08:52:55.237
+!MESSAGE classpath=98 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 08:52:55.239
+!MESSAGE buffering callback sts4.classpath.EQwJKuip interessados false 98
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 08:52:55.239
+!MESSAGE executing callback sts4.classpath.EQwJKuip 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 08:52:55.259
+!MESSAGE executing callback sts4.classpath.EQwJKuip SUCCESS [done]
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-03 08:52:56.363
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-03 08:52:56.479
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 08:52:56.864
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 08:52:56.867
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 08:52:56.870
+!MESSAGE buffering callback sts4.classpath.EQwJKuip interessados false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 08:52:56.870
+!MESSAGE executing callback sts4.classpath.EQwJKuip 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 08:52:56.884
+!MESSAGE executing callback sts4.classpath.EQwJKuip SUCCESS [done]
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-03 08:52:57.971
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-03 08:52:58.036
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-03 08:58:22.659
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-03 09:01:33.554
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-03 09:03:05.487
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-03 09:08:51.203
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-03 09:08:51.274
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 09:09:11.373
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 09:09:11.375
+!MESSAGE classpath=97 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 09:09:11.377
+!MESSAGE buffering callback sts4.classpath.EQwJKuip interessados false 97
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 09:09:11.377
+!MESSAGE executing callback sts4.classpath.EQwJKuip 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 09:09:11.389
+!MESSAGE executing callback sts4.classpath.EQwJKuip SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 09:09:12.618
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 09:09:12.624
+!MESSAGE classpath=99 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 09:09:12.628
+!MESSAGE buffering callback sts4.classpath.EQwJKuip interessados false 99
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 09:09:12.628
+!MESSAGE executing callback sts4.classpath.EQwJKuip 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 09:09:12.755
+!MESSAGE executing callback sts4.classpath.EQwJKuip SUCCESS [done]
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-03 09:09:13.025
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2022-01-03 09:09:13.139
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.3.2.Final

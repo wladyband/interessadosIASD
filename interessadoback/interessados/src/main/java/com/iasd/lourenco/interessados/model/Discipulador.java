@@ -24,9 +24,7 @@ public class Discipulador {
 	@JoinColumn(name = "codigo_ocupacao")
 	private Ocupacao ocupacao;
 
-	@ManyToOne
-	@JoinColumn(name = "codigo_discipulo")
-	private Discipulo discipulo;
+
 
 	public Long getCodigo() {
 		return codigo;
@@ -50,14 +48,6 @@ public class Discipulador {
 
 	public void setOcupacao(Ocupacao ocupacao) {
 		this.ocupacao = ocupacao;
-	}
-
-	public Discipulo getDiscipulo() {
-		return discipulo;
-	}
-
-	public void setDiscipulo(Discipulo discipulo) {
-		this.discipulo = discipulo;
 	}
 
 	@Override

@@ -1,6 +1,6 @@
 import { DiscipuloService, DiscipuloFiltro } from './../discipulo.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { LazyLoadEvent } from 'primeng/api';
+import { ConfirmationService, LazyLoadEvent, MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
 
 @Component({
@@ -16,7 +16,10 @@ export class PesquisaDiscipuloComponent implements OnInit {
   @ViewChild('tabela') grid!: Table;
 
   constructor(
-    private discipuloService: DiscipuloService) { }
+    private discipuloService: DiscipuloService,
+    private messageService: MessageService,
+    private confirmationService: ConfirmationService
+    ) { }
 
   ngOnInit(): void {
 
@@ -41,8 +44,22 @@ export class PesquisaDiscipuloComponent implements OnInit {
     excluir(discipulo: any) {
       this.discipuloService.excluir(discipulo.codigo)
         .then(() => {
-          this.grid.reset();
+          if (this.grid.first === 0) {
+            this.pesquisar();
+          } else {
+            this.grid.reset();
+          }
+          this.messageService.add({ severity: 'success', detail: 'Discipulo excluído com sucesso!' })
         })
+    }
+
+    confirmarExclusao(discipulo: any): void {
+      this.confirmationService.confirm({
+        message: 'Tem certeza que deseja excluir?',
+        accept: () => {
+            this.excluir(discipulo);
+        }
+      });
     }
 
 }

@@ -1,5 +1,5 @@
 package com.iasd.lourenco.interessados.model;
-
+ 
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -8,6 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -27,6 +30,10 @@ public class Discipulo {
 	private String origem;
 	private TipoInteresse tipo_interesse;
 	private TipoAtendimento tipo_atendimento;
+	
+	@ManyToOne
+	@JoinColumn(name = "codigo_discipulador")
+	private Discipulador discipulador;
 
 	public Long getCodigo() {
 		return codigo;

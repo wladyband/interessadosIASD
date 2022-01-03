@@ -51,7 +51,7 @@
 
               <td class="col-nascimento">
                 <span class="column-title">Data</span>
-                {{ discipulo.dataNascimento }}
+                {{ discipulo.dataNascimento  | date:'dd/MM/y' }}
               </td>
 
               <td class="col-data">
@@ -63,7 +63,7 @@
               <td class="col-acoes">
                 <a pButton icon="pi pi-pencil" pTooltip="Editar" tooltipPosition="top"></a>
                 <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top"
-                (click)="excluir(discipulo)"></button>
+                (click)="confirmarExclusao(discipulo)"></button>
               </td>
             </tr>
           </ng-template>
