@@ -22,11 +22,10 @@ import { MessageModule } from 'primeng/message';
 import { PesquisaDiscipuloComponent } from './pesquisa-discipulo/pesquisa-discipulo.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { CommonModule, DatePipe, registerLocaleData } from '@angular/common';
-import localePt from '@angular/common/locales/pt';
+import { CommonModule } from '@angular/common';
 import { DropdownModule } from 'primeng/dropdown';
 
-registerLocaleData(localePt, 'pt-BR');
+
 
 @NgModule({
   declarations: [
@@ -36,10 +35,7 @@ registerLocaleData(localePt, 'pt-BR');
   ],
   exports: [
   ],
-  providers: [
-    DatePipe,
-    {provide: LOCALE_ID, useValue: 'pt-BR' }
-  ],
+
   imports: [
     CommonModule,
     BrowserModule,

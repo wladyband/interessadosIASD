@@ -1,3 +1,6 @@
+import { TipoInteresseService } from './../../tipoInteresse/tipoInteresse.service';
+import { ErrorHandlerService } from './../../core/navbar/error-handler.service';
+import { TipoAtendimentoService } from '../../tipoAtendimento/tipoAtendimento.service';
 
 import { Component, OnInit } from '@angular/core';
 
@@ -8,12 +11,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiscipuladoCadastroComponent implements OnInit {
 
+  ptbr: any;
 
+  tipoAtendimentos: any[] = [];
+  tipoInteressados: any[] = [];
 
-  constructor() { }
+    constructor(
+    private tiipoInteresseService: TipoInteresseService,
+    private tipoAtendimentoService: TipoAtendimentoService,
+    private errorHandler: ErrorHandlerService
+  ) { }
 
   ngOnInit(): void {
+    this.carregarTipoAtendimentos();
+    this.carregarTipoInteressados();
+  }
 
+  carregarTipoAtendimentos() {
+    return this.tipoAtendimentoService.listarTodas()
+      .then(tipoAtendimentos => {
+        this.tipoAtendimentos = tipoAtendimentos.map((c: any) => ({ label: c.descricao, value: c.codigo }));
+      })
+      .catch(erro => this.errorHandler.handle(erro));
+  }
+
+  carregarTipoInteressados() {
+    return this.tiipoInteresseService.listarTodas()
+      .then(tipoInteressados => {
+        this.tipoInteressados = tipoInteressados.map((c: any) => ({ label: c.descricao, value: c.codigo }));
+      })
+      .catch(erro => this.errorHandler.handle(erro));
   }
 
 }

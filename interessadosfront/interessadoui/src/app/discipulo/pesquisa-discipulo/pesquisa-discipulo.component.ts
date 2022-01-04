@@ -1,3 +1,4 @@
+import { ErrorHandlerService } from './../../core/navbar/error-handler.service';
 import { DiscipuloService, DiscipuloFiltro } from './../discipulo.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ConfirmationService, LazyLoadEvent, MessageService } from 'primeng/api';
@@ -16,6 +17,7 @@ export class PesquisaDiscipuloComponent implements OnInit {
   @ViewChild('tabela') grid!: Table;
 
   constructor(
+    private errorHandler: ErrorHandlerService,
     private discipuloService: DiscipuloService,
     private messageService: MessageService,
     private confirmationService: ConfirmationService
@@ -30,9 +32,10 @@ export class PesquisaDiscipuloComponent implements OnInit {
 
         this.discipuloService.pesquisar(this.filtro)
         .then(resultado => {
+          this.discipulos = resultado.discipulos;
           this.totalRegistros = resultado.total;
-          this.discipulos = resultado.discipulos
-        });
+        })
+        .catch(erro => this.errorHandler.handle(erro));
     }
 
 

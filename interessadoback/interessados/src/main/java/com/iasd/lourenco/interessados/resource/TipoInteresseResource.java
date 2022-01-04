@@ -24,7 +24,7 @@ import com.iasd.lourenco.interessados.model.TipoInteresse;
 import com.iasd.lourenco.interessados.repository.TipoInteresseRepository;
 
 @RestController
-@RequestMapping("/tipoInteresse")
+@RequestMapping("/tipoInteressados")
 public class TipoInteresseResource {
 	
 	@Autowired

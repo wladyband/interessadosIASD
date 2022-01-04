@@ -15,9 +15,6 @@ import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-transla
 
 registerLocaleData(localePt, 'pt-BR');
 
-export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http);
-}
 
 @NgModule({
   declarations: [
@@ -28,24 +25,9 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     DiscipuladoModule,
     CoreModule,
     DiscipuladoModule,
-    ToastModule,
-    ConfirmDialogModule,
-    TranslateModule.forRoot({
-      loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-      }
-      }),
     AppRoutingModule
   ],
-  providers: [
-    MessageService,
-    ConfirmationService,
-    DatePipe,
-    {provide: LOCALE_ID, useValue: 'pt-BR' },
-    TranslateService
-  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,7 +8,7 @@
 
       <div class="col-6 col-3 p-fluid">
         <label>Data de nascimento</label>
-        <p-calendar dateFormat="dd/mm/yy"
+        <p-calendar [locale]="ptbr" dateFormat="dd/mm/yy"
           [inline]="false" [readonlyInput]="true"
           [showIcon]="true"></p-calendar>
       </div>
@@ -27,13 +27,15 @@
       </div>
       <div class="col-12 col-6 p-fluid">
         <label>Tipo de interesse</label>
-        <input pInputText type="text">
+        <p-dropdown [options]="tipoInteressados" placeholder="Selecione"
+        #tipoInteressado [required]="true"></p-dropdown>
       </div>
-      <div class="col-12 col-6 p-fluid">
+      <div class="col-6 col-6 p-fluid">
         <label>Tipo de atendimento</label>
-        <input pInputText type="text">
+        <p-dropdown [options]="tipoAtendimentos" placeholder="Selecione"
+        #tipoAtendimento [required]="true"></p-dropdown>
       </div>
-      <div class="col-12 col-3 p-fluid">
+      <div class="col-6 col-3 p-fluid">
         <label>Celular</label>
         <p-inputMask mask="(99)99999-9999"></p-inputMask>
       </div>
