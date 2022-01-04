@@ -1,3 +1,5 @@
+import { DiscipuladoresService } from './../../discipulador/discipulador.service';
+import { DiscipuloService } from './../../discipulo/discipulo.service';
 import { TipoInteresseService } from './../../tipoInteresse/tipoInteresse.service';
 import { TipoAtendimentoService } from '../../tipoAtendimento/tipoAtendimento.service';
 import { ErrorHandlerService } from './error-handler.service';
@@ -52,6 +54,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 
   ],
   providers: [
+    DiscipuladoresService,
     TipoInteresseService,
     TipoAtendimentoService,
     ErrorHandlerService,

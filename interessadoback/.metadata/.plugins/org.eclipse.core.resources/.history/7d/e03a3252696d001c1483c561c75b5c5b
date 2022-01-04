@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.iasd.lourenco.interessados.event.RecursoCriadoEvent;
 import com.iasd.lourenco.interessados.model.Discipulador;
+import com.iasd.lourenco.interessados.model.Discipulo;
 import com.iasd.lourenco.interessados.repository.DiscipuladorRepository;
 
 @RestController
