@@ -1,3 +1,4 @@
+import { Discipulo } from './../model/discipulo';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
@@ -50,6 +51,11 @@ export class DiscipuloService {
     const headers = new HttpHeaders()
 
     return this.http.delete<void>(`${this.discipulosURL}/${codigo}`, { headers })
+      .toPromise();
+  }
+
+  adicionar(discipulado: Discipulo): Promise<Discipulo> {
+    return this.http.post<Discipulo>(this.discipulosURL, discipulado)
       .toPromise();
   }
 

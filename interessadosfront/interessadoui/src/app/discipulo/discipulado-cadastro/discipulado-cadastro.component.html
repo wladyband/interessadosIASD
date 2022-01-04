@@ -1,5 +1,5 @@
 <div class="container">
-  <form >
+  <form #dicipuloForm="ngForm" autocomplete="off" (ngSubmit)="salvar(dicipuloForm)" >
 
     <div class="grid">
       <div class="col-12">
@@ -10,42 +10,114 @@
         <label>Data de nascimento</label>
         <p-calendar [locale]="ptbr" dateFormat="dd/mm/yy"
           [inline]="false" [readonlyInput]="true"
-          [showIcon]="true"></p-calendar>
+          [showIcon]="true"
+          [(ngModel)]="discipulo.dataNascimento"
+          name="dataNascimento"
+          #nascimento="ngModel" [required]="true"></p-calendar>
       </div>
+
       <div class="col-12 col-9 p-fluid">
         <label>Nome</label>
-        <input pInputText type="text" name="nome"
-        ngModel #nome="ngModel" required minlength="5">
+        <input pInputText
+        type="text"
+        name="nome"
+        ngModel #nome="ngModel"
+        required minlength="5"
+        [required]="true"
+        [(ngModel)]="discipulo.nome">
+
         <app-message [control]="nome.control" error="required"
           text="Informe o nome"></app-message>
         <app-message [control]="nome.control" error="minlength"
           text="Mínimo de 5 caracteres"></app-message>
+
       </div>
+
       <div class="col-12 col-3 p-fluid">
         <label>Endereço</label>
-        <input pInputText type="text">
+        <input pInputText
+        type="text"
+        name="logradouro"
+        [(ngModel)]="discipulo.logradouro"
+        #logradouro="ngModel"
+        required minlength="10">
+
+      <app-message [control]="logradouro.control" error="required"
+        text="Informe o endereço"></app-message>
+      <app-message [control]="logradouro.control" error="minlength"
+        text="Mínimo de 10 caracteres"></app-message>
+
+
       </div>
+
       <div class="col-12 col-6 p-fluid">
         <label>Tipo de interesse</label>
-        <p-dropdown [options]="tipoInteressados" placeholder="Selecione"
-        #tipoInteressado [required]="true"></p-dropdown>
+        <p-dropdown
+        [options]="tipoInteressados"
+        name="tipoInteressado"
+        placeholder="Selecione"
+        #tipoInteressado
+        [required]="true"
+        [(ngModel)]="discipulo.tipo_interesse.codigo"
+        [required]="true"></p-dropdown>
       </div>
+
       <div class="col-6 col-6 p-fluid">
         <label>Tipo de atendimento</label>
-        <p-dropdown [options]="tipoAtendimentos" placeholder="Selecione"
-        #tipoAtendimento [required]="true"></p-dropdown>
+        <p-dropdown
+        [options]="tipoAtendimentos"
+        name="tipoAtendimento"
+        placeholder="Selecione"
+        #tipoAtendimento
+        [(ngModel)]="discipulo.tipo_atendimento.codigo"
+        [required]="true"></p-dropdown>
       </div>
-      <div class="col-6 col-6 p-fluid">
+
+      <div class="col-4 col-4 p-fluid">
         <label>Discipuladores</label>
-        <p-dropdown [options]="discipuladores" placeholder="Selecione"
-        #discipuladore [required]="true"></p-dropdown>
+        <p-dropdown
+        [options]="discipuladores"
+        name="discipulador"
+        placeholder="Selecione"
+        #discipuladore
+        [(ngModel)]="discipulo.discipulador.codigo"
+        [required]="true"
+        [filter]="true"></p-dropdown>
       </div>
+
+      <div class="col-2 col-2 p-fluid">
+      <i class="pi pi-save salvar-discipuladores"  pTooltip="Adicionar discipuladores" tooltipPosition="top"></i>
+      </div>
+
       <div class="col-6 col-3 p-fluid">
         <label>Celular</label>
-        <p-inputMask mask="(99)99999-9999"></p-inputMask>
+        <p-inputMask
+        mask="(99)99999-9999"
+        name="telefone"
+        #telefone="ngModel"
+        [(ngModel)]="discipulo.telefone"
+        [required]="true"></p-inputMask>
+
+        <app-message [control]="telefone.control" error="required"
+        text="Informe o telefone celular"></app-message>
       </div>
+
+      <div class="col-6 col-6 p-fluid">
+        <label>Origem</label>
+        <input pInputText
+        type="text"
+        name="origem"
+        ngModel #origem="ngModel"
+        [required]="true"
+        [(ngModel)]="discipulo.origem">
+
+        <app-message [control]="origem.control" error="required"
+          text="Informe a origem do discipulo"></app-message>
+
+      </div>
+
       <div class="col-12">
-        <button pButton type="submit" label="Salvar"></button>
+        <button pButton type="submit" label="Salvar"  [disabled]="dicipuloForm.invalid"></button>
         <button pButton type="button" label="Novo" class="button-info"></button>
         <button pButton type="submit" routerLink="/discipulos" label="Pesquisar"></button>
         </div>

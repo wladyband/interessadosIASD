@@ -54,6 +54,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 
   ],
   providers: [
+    DiscipuloService,
     DiscipuladoresService,
     TipoInteresseService,
     TipoAtendimentoService,

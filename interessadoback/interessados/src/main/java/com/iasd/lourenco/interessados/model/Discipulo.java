@@ -1,5 +1,5 @@
 package com.iasd.lourenco.interessados.model;
- 
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -21,22 +21,22 @@ public class Discipulo {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 	private String nome;
+	private String logradouro;
 	private String telefone;
 
 	@Column(name = "data_nascimento")
 	private LocalDate dataNascimento;
 
-	private String logradouro;
 	private String origem;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "codigo_interesse")
 	private TipoInteresse tipo_interesse;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "codigo_atendimento")
 	private TipoAtendimento tipo_atendimento;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "codigo_discipulador")
 	private Discipulador discipulador;
@@ -57,6 +57,14 @@ public class Discipulo {
 		this.nome = nome;
 	}
 
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+
 	public String getTelefone() {
 		return telefone;
 	}
@@ -71,14 +79,6 @@ public class Discipulo {
 
 	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
-	}
-
-	public String getLogradouro() {
-		return logradouro;
-	}
-
-	public void setLogradouro(String logradouro) {
-		this.logradouro = logradouro;
 	}
 
 	public String getOrigem() {
@@ -103,6 +103,14 @@ public class Discipulo {
 
 	public void setTipo_atendimento(TipoAtendimento tipo_atendimento) {
 		this.tipo_atendimento = tipo_atendimento;
+	}
+
+	public Discipulador getDiscipulador() {
+		return discipulador;
+	}
+
+	public void setDiscipulador(Discipulador discipulador) {
+		this.discipulador = discipulador;
 	}
 
 	@Override
