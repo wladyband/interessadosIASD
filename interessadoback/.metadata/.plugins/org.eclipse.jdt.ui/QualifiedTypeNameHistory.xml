@@ -26,7 +26,6 @@
     <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
-    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
     <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.model.Ocupacao"/>
     <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.model.Discipulador"/>
@@ -46,4 +45,11 @@
     <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
     <fullyQualifiedTypeName name="org.springframework.data.domain.PageImpl"/>
     <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.model.Discipulo"/>
+    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+    <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.model.TipoInteresse"/>
+    <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.repository.TipoAtendimentoRepository"/>
+    <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.model.TipoAtendimento"/>
+    <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.repository.TipoInteresseRepository"/>
 </qualifiedTypeNameHistroy>
