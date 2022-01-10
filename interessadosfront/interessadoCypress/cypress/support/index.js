@@ -16,5 +16,31 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+Cypress.SelectorPlayground.defaults({
+    selectorPriority: [
+        'id',
+        'class', 
+        'tag', 
+        'attributes', 
+        'data-cy', 
+        'data-test', 
+        'data-testid', 
+        'nth-child'
+    ],
+  })
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+
+/*
+https://stackoverflow.com/questions/62980435/the-following-error-originated-from-your-application-code-not-from-cypress
+  
+*/
+
+import './commands'
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // returning false here prevents Cypress from
+   // failing the test
+return false
+})
