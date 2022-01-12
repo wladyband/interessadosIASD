@@ -6,7 +6,7 @@ import '../../support/commandsDiscipulo'
 describe('acesso padrao',  () => {
 
     before(() => {
-        cy.visit(loc.URL.LISTA_DISCIPULOS)
+        cy.visit('/discipulos')
     })
 
     it('teste de acesso ao menu', () => {
@@ -16,7 +16,7 @@ describe('acesso padrao',  () => {
     })
 
     it('teste selecionamento de discipuladores', () => {
-        cy.visit(loc.URL.CADASTRO_DISCIPULOS)
+        cy.visit('/discipulo/novo')
         cy.get(loc.CADASTRAR_DISCUPULOS.SELECIONAR_DISCIPULADORES).click()
         cy.get(loc.CADASTRAR_DISCUPULOS.SELECIONAR_FLAVIA).click()
         cy.get(loc.CADASTRAR_DISCUPULOS.VARIFICAR_FLAVIA_COMO_SELECIONADO).should('contain','Flávia')
@@ -24,7 +24,7 @@ describe('acesso padrao',  () => {
     
 
     it('salvando discipulo', () => {
-        cy.visit(loc.URL.CADASTRO_DISCIPULOS)
+        cy.visit('/discipulo/novo')
         cy.salvarDiscipulo(
             'Gildo teste LT', 
             'Rua João adinaldo da Cunha', 

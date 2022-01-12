@@ -28,10 +28,6 @@ const locators = {
         CONFIRMACAO_INCLUSAO: "//div[@class='toast-message ng-star-inserted']",
         FECHAR_MENSAGEM_DE_SUCESSO: '.toast-close-button > .ng-tns-c9-0'
     },
-    URL: {
-        LISTA_DISCIPULOS: 'http://localhost:4200/discipulos',
-        CADASTRO_DISCIPULOS: 'http://localhost:4200/discipulo/novo'
-    },
     SISTEMA: {
         MENU: 'p-button.p-element > .p-ripple',
         FECHAR_MENU: '.p-sidebar-close-icon',
