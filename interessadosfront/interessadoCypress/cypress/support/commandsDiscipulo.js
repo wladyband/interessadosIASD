@@ -16,3 +16,8 @@ Cypress.Commands.add('salvarDiscipulo', (nome, endereco, telefone, origem) => {
     cy.get(loc.CADASTRAR_DISCUPULOS.ESCREVER_A_ORIGEM).type(origem)
     cy.get(loc.CADASTRAR_DISCUPULOS.CLICAR_NO_BOTAO_SALVAR).click()
 })
+
+Cypress.Commands.add('baseUrl', (url) => {
+    'localhost:8080'+ url
+})
+
