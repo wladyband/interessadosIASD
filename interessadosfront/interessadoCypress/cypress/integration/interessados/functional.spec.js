@@ -25,7 +25,11 @@ describe('acesso padrao',  () => {
 
     it('salvando discipulo', () => {
         cy.visit(loc.URL.CADASTRO_DISCIPULOS)
-        cy.salvarDiscipulo('Gildo teste LT', 'Rua João adinaldo da Cunha', '11956892345', 'Convite de Flávia')
+        cy.salvarDiscipulo(
+            'Gildo teste LT', 
+            'Rua João adinaldo da Cunha', 
+            '11956892345', 
+            'Convite de Flávia')
         cy.get(loc.CADASTRAR_DISCUPULOS.MENSAGEM_SUCESSO).should('contain', 'Discipulo adicionado com sucesso!')
     })
 })
