@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import '../../support/commandsDiscipulo' /*>>>>>>>  O caminho do arquivo está correto */
+import '../../support/commandsDiscipulo'
 
 describe('testes de endpoints', () => {
 
@@ -31,18 +31,12 @@ describe('testes de endpoints', () => {
                 'origem':'sjdcnbjksdnbckndskncjdsc',
                 'tipo_interesse':{
                     'codigo':1,
-                    'modelo':null,
-                    'descricao':null
                 },
                 'tipo_atendimento':{
                     'codigo':1,
-                    'modelo':null,
-                    'descricao':null
                 },
                 'discipulador':{
                     'codigo':1,
-                    'nome':null,
-                    'ocupacao':null
                 }
             }
         }).then(res => {
