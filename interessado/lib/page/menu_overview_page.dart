@@ -14,7 +14,7 @@ class MenuOverViewPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Center(child: Text(
-          "Igreja Adventista do Sétimo dia",
+          "IASD",
           textAlign: TextAlign.center))
       ),
       body: Container(
@@ -41,7 +41,16 @@ class MenuOverViewPage extends StatelessWidget {
                   )
                 ],
               ),
-              )
+              ),
+              Padding(padding: EdgeInsets.only(top: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                   Text('Professores'),
+                   Text('Discipulos'),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
