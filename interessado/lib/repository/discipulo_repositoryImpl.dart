@@ -8,7 +8,8 @@ class DiscipuloHttpRepositoryImpl implements IDiscipuloRepository{
   @override
   Future<List<Discipulo>> findAllDiscipulo() async {
     final response = await http.get(Uri.parse('http://localhost:8080/discipulos'));
-    final List<Map<String, dynamic>> responseMap = jsonDecode(response.body);
+
+    final List<dynamic> responseMap = jsonDecode(response.body);
     return responseMap.map<Discipulo>((resp) => Discipulo.fromMap(resp)).toList();
   }
 
