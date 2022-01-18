@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:interessado/models/discipulo.dart';
-import 'package:intl/intl.dart';
 
 class DiscipulosWidget extends StatefulWidget {
   final Discipulo discipulo;
