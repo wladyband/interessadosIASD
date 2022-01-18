@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:interessado/page/discipulo_overview_page.dart';
 import 'package:interessado/uitls/app_routes_images.dart';
 
@@ -12,7 +13,8 @@ class _MenuOverViewState extends State<MenuOverView> {
 
   void _abrirListaDiscipulos(){
         Navigator.push(context, 
-        MaterialPageRoute(builder: (context) => DiscipuloOverView()));
+        MaterialPageRoute(builder: (context) => DiscipuloOverView(),),);
+
   }
   void _abrirListaProfessores(){
 
