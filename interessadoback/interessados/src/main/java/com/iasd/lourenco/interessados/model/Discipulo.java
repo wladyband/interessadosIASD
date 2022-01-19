@@ -13,6 +13,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
+
 @Entity
 @Table(name = "discipulo")
 public class Discipulo {
@@ -28,18 +30,8 @@ public class Discipulo {
 	private LocalDate dataNascimento;
 
 	private String origem;
-
-	@ManyToOne
-	@JoinColumn(name = "codigo_interesse")
-	private TipoInteresse tipo_interesse;
-
-	@ManyToOne
-	@JoinColumn(name = "codigo_atendimento")
-	private TipoAtendimento tipo_atendimento;
-
-	@ManyToOne
-	@JoinColumn(name = "codigo_discipulador")
-	private Discipulador discipulador;
+	
+	
 
 	public Long getCodigo() {
 		return codigo;
@@ -89,30 +81,6 @@ public class Discipulo {
 		this.origem = origem;
 	}
 
-	public TipoInteresse getTipo_interesse() {
-		return tipo_interesse;
-	}
-
-	public void setTipo_interesse(TipoInteresse tipo_interesse) {
-		this.tipo_interesse = tipo_interesse;
-	}
-
-	public TipoAtendimento getTipo_atendimento() {
-		return tipo_atendimento;
-	}
-
-	public void setTipo_atendimento(TipoAtendimento tipo_atendimento) {
-		this.tipo_atendimento = tipo_atendimento;
-	}
-
-	public Discipulador getDiscipulador() {
-		return discipulador;
-	}
-
-	public void setDiscipulador(Discipulador discipulador) {
-		this.discipulador = discipulador;
-	}
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(codigo);
@@ -129,5 +97,7 @@ public class Discipulo {
 		Discipulo other = (Discipulo) obj;
 		return Objects.equals(codigo, other.codigo);
 	}
+	
+	
 
 }

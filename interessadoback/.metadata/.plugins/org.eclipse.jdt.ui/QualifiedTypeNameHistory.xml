@@ -52,4 +52,5 @@
     <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.repository.TipoAtendimentoRepository"/>
     <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.model.TipoAtendimento"/>
     <fullyQualifiedTypeName name="com.iasd.lourenco.interessados.repository.TipoInteresseRepository"/>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.GenericGenerator"/>
 </qualifiedTypeNameHistroy>

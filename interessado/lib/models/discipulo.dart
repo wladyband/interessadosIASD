@@ -1,6 +1,3 @@
-import 'package:interessado/models/discipulador.dart';
-import 'package:interessado/models/tipo_atendimento.dart';
-import 'package:interessado/models/tipo_interesse.dart';
 
 class Discipulo{
    String codigo;
@@ -9,9 +6,6 @@ class Discipulo{
    String telefone;
    String dataNascimento;
    String origem;
-   List<TipoInteresse> tipoInteresse;
-   List<TipoAtendimento> tipoAtendimento;
-   List<Discipulador> discipulador;
 
    Discipulo({
     required this.codigo,
@@ -20,10 +14,7 @@ class Discipulo{
     required this.telefone,
     required this.dataNascimento,
     required this.origem,
-    required this.tipoInteresse,
-    required this.tipoAtendimento,
-    required this.discipulador,
-  });
+   });
 
    Map<String, dynamic> toMap() {
     return {
@@ -33,9 +24,6 @@ class Discipulo{
       'telefone': this.telefone,
       'dataNascimento': this.dataNascimento,
       'origem': this.origem,
-      'tipoInteresse': this.tipoInteresse,
-      'tipoAtendimento': this.tipoAtendimento,
-      'discipulador': this.discipulador,
     };
   }
 
@@ -47,9 +35,6 @@ class Discipulo{
       telefone: map['telefone'] as String,
       dataNascimento: map['dataNascimento'] as String,
       origem: map['origem'] as String,
-      tipoInteresse: map['tipoInteresse'] as List<TipoInteresse>,
-      tipoAtendimento: map['tipoAtendimento'] as List<TipoAtendimento>,
-      discipulador: map['discipulador'] as List<Discipulador>,
     );
   }
 }

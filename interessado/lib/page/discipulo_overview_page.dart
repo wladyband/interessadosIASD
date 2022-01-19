@@ -17,6 +17,7 @@ class DiscipuloOverView extends GetView<HttpController> {
             final Discipulo item = state[index];
             return ListTile(
               title: Text(item.nome),
+
             );
           },
         );
