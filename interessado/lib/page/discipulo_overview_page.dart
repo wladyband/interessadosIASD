@@ -9,8 +9,10 @@ class DiscipuloOverView extends GetView<HttpController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Http'),),
-      body: controller.obx((state) {
+      appBar: AppBar(title: Text('Lista de discipulos'),
+        backgroundColor: Colors.teal,
+      ),
+    body: controller.obx((state) {
         return ListView.builder(
           itemCount: state.length,
           itemBuilder: (_, index){

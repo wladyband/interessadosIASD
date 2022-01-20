@@ -29,7 +29,7 @@ class Discipulo{
 
   factory Discipulo.fromMap(Map<String, dynamic> map) {
     return Discipulo(
-      codigo: map['codigo'] as String,
+      codigo: map['codigo'].toString(),
       nome: map['nome'] as String,
       logradouro: map['logradouro'] as String,
       telefone: map['telefone'] as String,
